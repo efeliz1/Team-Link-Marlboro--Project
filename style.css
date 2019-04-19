@@ -14,12 +14,29 @@ html{
 }
 
 body{
-    background: black;
+    background-image: url(https://images.pexels.com/photos/1447235/pexels-photo-1447235.jpeg?cs=srgb&dl=4k-wallpaper-countdown-dark-1447235.jpg&fm=jpg);
+    background-color: black;
+    background-blend-mode: var(--light);
     margin: 30px 50px;
     line-height: 1.4;
 
 }
 
+
+.btn {
+    background:var(--primary);
+    color: var(--dark);
+    padding:  0.6rem 1.3rem;
+    border: 0;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
 .main-nav ul {
     display: grid;
     grid-gap: 20px;
@@ -43,6 +60,46 @@ body{
 .main-nav a:hover {
     background: #DC143C;
     color:var(--dark) ;
+}
+
+/* TC*/
+
+.top-container{
+    display: grid;
+    grid-gap: 15px;
+    grid-template: 
+    'Showcase showcase'
+    'Showcase showcase';
+}
+
+/* SC*/
+.showcase{
+    grid-area: showcase;
+    min-height: 200px;
+    background: url(https://instagram.fbos1-2.fna.fbcdn.net/vp/7bbda43cb131cc1e7b37c9caaff6c677/5D4646D2/t51.2885-15/sh0.08/e35/s640x640/26864716_219489251956934_2111624360455307264_n.jpg?_nc_ht=instagram.fbos1-2.fna.fbcdn.net);
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    box-shadow: var(--shadow);
+
+}
+.showcase h1 {
+    font-size: 4rem;
+    margin-bottom: 0;
+    color: var(--light);
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
+.showcase p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    color: var(--light);
+    text-shadow: 2px 2px 4px #000000);
 }
 
 
