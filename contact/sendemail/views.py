@@ -1,4 +1,4 @@
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import EmailMessage, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .forms import ContactForm
@@ -12,15 +12,16 @@ def emailView(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
-            subject = form.cleaned_data['subject']
-            from_email = form.cleaned_data['from_email']
-            message = form.cleaned_data['message']
-            try:
-                send_mail(subject, message, from_email, ['edwinjosefeliz@comcast.net'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found')
-            return redirect('success')
-
+            contact_name = form.cleaned_data['name']
+            contact_email = form.cleaned_data['email']
+            message = f"{contact_name} has sent you a new message ..."
+            email_msg = EmailMessage(
+                subject='New Enquiry', body=message,
+                from_email='tlmarlborough@zoho.com',
+                to=['tlmarlborough@zoho.com'],
+                headers={'Reply-To': contact_email})  # <<< where you want replies to go
+            email_msg.send()
+            
     return render(request, "email.html", {'form': form})
 
 
@@ -35,3 +36,4 @@ EMAIL_HOST_USER = 'tlmarlborough@zoho.com'
 EMAIL_HOST_PASSWORD = 'teamlink123'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
