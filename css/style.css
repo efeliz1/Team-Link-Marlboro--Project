@@ -67,7 +67,7 @@ text-align: center;
 
 #showcase .bg-image{
 position: absolute; /* must be abosulte if not it goes over the div of showcase */
-background: #333 url(image/header.img_2.jpg);
+background: #333 url(img_2.jpg);
 background-position: 35% 35%;
 background-repeat: no-repeat;
 background-size: cover;
