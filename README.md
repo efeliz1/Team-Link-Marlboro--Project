@@ -1,9 +1,9 @@
-# Team Link Marlboro 
+# Team Link - Marlborough
 
-## Martial art school front page site.
+### Martial art school front page site.
 
-+HTML
-+CSS
+* HTML
+* CSS
 
 ![team_link_demo](https://user-images.githubusercontent.com/42578878/102919989-d4ebd180-4457-11eb-824e-7fc9e417b211.gif)
 
