@@ -1,6 +1,9 @@
 # Team Link Marlboro 
 
-Martial art school webiste with a contact animation and contact form.
+## Martial art school webiste.
 
+-HTML
+-CSS
 
-https://user-images.githubusercontent.com/42578878/102919680-4b3c0400-4457-11eb-9ded-d730751067bf.mp4
+![team_link_demo](https://user-images.githubusercontent.com/42578878/102919989-d4ebd180-4457-11eb-824e-7fc9e417b211.gif)
+
